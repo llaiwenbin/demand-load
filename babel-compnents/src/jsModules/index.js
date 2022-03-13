@@ -6,7 +6,7 @@ import('../async/index').then((module) => {
 });
 
 const umd = require('../cjs/index')
-// import ip from './commonIp';
+import ip from '../es/commonIp';
 console.log('index.js',ip)
 console.log(Hi)
 console.log(umd);
