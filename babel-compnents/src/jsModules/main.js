@@ -23,22 +23,24 @@
   
   /**
    * 赋值后会形成 __webpack_module_cache__ 对象 
+   * {
+   *  'filePath1': { deault: {sayHi},sayHi:()},
+   *  ...
+   * }
+   * 
+   * 
    * __webpack_require__ = function (filePath) {
    *    if(!__webpack_module_cache__[filePath]) {
    *        var module = {}
    *        __webpack_module_cache__[filePath] = __webpack_modules__.filePath(module)
    *     }
    * }
-   * {
-   *  'filePath1': { deault: {sayHi},sayHi:()},
-   *  ...
-   * }
    * **/ 
 
 
   /**
    * 异步加载
-   *  __webpack_require__.e 是一个Promise.all 
+   *  __webpack_require__.e 是一个Promise.all then后执行价值异步模块后的方法
    * 它通过执行 __webpack_require__.f内所有方法，来获取各个方法的promise状态，所有promise.all 完成后说明异步文件加载完成。
    * 暂时只有__webpack_require__.f.j 方法，它主要是为了给 promises 队列中添加 promise 状态，同时调用 __webpack_require__.l 来加载对应异步文件js
    * 
