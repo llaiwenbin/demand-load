@@ -19,6 +19,8 @@
    *    filePath2,
    *    ... 
    * }
+   * 
+   * 只有通过 es 导入会通过 __webpack_require__.r 给exports 添加 __esModule:true
    * **/
   
   /**

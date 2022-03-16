@@ -1,1 +1,0 @@
-{"version":3,"file":"src_async_index_js.main.js","mappings":";;;;;;;;;;;;;AAAA;AACA;AACA;AACA;AACA;AACA,iEAAe,WAAW","sources":["webpack://babel-compnents/./src/async/index.js"],"sourcesContent":["\r\nconst asyncModule = {\r\n    name: 'asyncModule'\r\n};\r\n\r\nexport default asyncModule;"],"names":[],"sourceRoot":""}

@@ -1,23 +1,21 @@
 const path = require('path');
 const config = {
-    entry: {
-        external:'./src/external/index.js'
-    },
-    externals: {
-        lodash : {
-            commonjs: "lodash",
-            amd: "lodash",
-            root: "_" // 指向全局变量
-        },
-        jq: {
-            root: '$'
-        }
-    },
+    entry: './src/cssModules/index.js',
     output: {
-        publicPath: "./",
         filename: '[name].js',
         path: path.resolve(__dirname, 'dist')
     },
+    module: {
+        rules: [
+           {
+             test: /\.css$/,
+             use: [
+               'style-loader',
+               'css-loader'
+             ]
+           }
+        ]
+    }
 }
 module.exports = (env,argv) => {
     if (argv.mode === 'development') {
